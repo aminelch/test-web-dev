@@ -1,7 +1,13 @@
+# Welcome to StackEdit!
+
+
 
 # Test Web dev
 
-- fork project
-- cd ...
-- install dependancies with composer
-- run dev server via php -S localhost:8000 -t public/index or symfony serve -d
+  #### How it works
+
+    $- git clone https://github.com/aminelch/test-web-dev.git
+    $- cd test-web-dev
+    $- composer install
+    $- symfony serve -d
+
