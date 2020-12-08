@@ -3,11 +3,21 @@
 {% block title  "Homepage" %}
 
 {% block body %}
-    <div class="container">
-        <div class="row mt-3">
-            <div class="col-md-6 mx-auto">
-                <h1>Homepage</h1>
-            </div>
-        </div>
-    </div>
+    {% if softwareList | length > 0 %}
+
+            {% for row in softwareList|batch(3) %}
+                <div class="row mb-5">
+                    {% for item in row %}
+                        <div class="col-md-3">
+                            <h3>{{ item.name }}</h3>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="mt-5 h1 text-center">No software yet .
+                <a href="#">Be the first!</a>
+            </p>
+        {% endif %}
+
 {% endblock %}

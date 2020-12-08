@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png">
@@ -19,10 +19,11 @@
 {% set sitename = {'sitename': 'Demo'} %}
 {% include 'layout/partials/_navbar.html.twig' with  sitename %}
  {% include 'layout/partials/_flash.html.twig'  %}
-
+<div class="container" style="margin-top: 80px;">
 {% block body %}
 
 {% endblock %}
+</div>
 <script src="{{ asset('/js/jquery.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('/js/bootstrap.min.js') }}" type="text/javascript"></script>
 {% block javascripts %}{% endblock %}
