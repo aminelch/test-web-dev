@@ -14,3 +14,16 @@
 .phpunit.result.cache
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
+.idea/
+.idea/php.xml
+.idea/test-web-dev.iml
+/.idea/commandlinetools/
+/.idea/inspectionProfiles/
+/.idea/sonarlint/
+/.idea/modules.xml
+/.idea/php.xml
+/.idea/symfony2.xml
+/.idea/test-web-dev.iml
+/.idea/vcs.xml
+/.idea/workspace.xml
+/.idea/*
