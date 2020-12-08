@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<title>Software index</title>
+
+{% block body %}
+    <h1>Software index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Constructor</th>
+                <th>Category</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for software in software %}
+            <tr>
+                <td>{{ software.id }}</td>
+                <td>{{ software.name }}</td>
+                <td>{{ software.constructor }}</td>
+                <td>{{ software.category }}</td>
+                <td>
+                    <a href="{{ path('software_show', {'id': software.id}) }}">show</a>
+                    <a href="{{ path('software_edit', {'id': software.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('software_new') }}">Create new</a>
+{% endblock %}
