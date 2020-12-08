@@ -5,19 +5,40 @@
 {% block body %}
     {% if softwareList | length > 0 %}
 
-            {% for row in softwareList|batch(3) %}
-                <div class="row mb-5">
-                    {% for item in row %}
-                        <div class="col-md-3">
-                            <h3>{{ item.name }}</h3>
+        {% for row in softwareList|batch(3) %}
+            <div class="row mb-5">
+                {% for item in row %}
+                    <div class="col-md-3 mr-4">
+                        <div class="card rounded-top overflow-hidden" style="width: 18rem;">
+                            <img class="card-img-top" src="https://place-hold.it/286x180" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title text-left">
+                                    {{ item.name }}
+                                    <span class="badge badge-success" style="font-size: 12px;">
+                                            {{ item.constructor }}
+                                        </span>
+                                    
+                                    <span class="badge badge-info" style="font-size: 12px;">
+                                            {{ item.category }}
+                                        </span>
+                                </h5>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis eligendi et modi necessitatibus? Ad cumque dolore
+                                </p>
+
+                            </div>
                         </div>
-                    {% endfor %}
-                </div>
-            {% endfor %}
-        {% else %}
-            <p class="mt-5 h1 text-center">No software yet .
-                <a href="#">Be the first!</a>
-            </p>
-        {% endif %}
+
+                    </div>
+
+
+                {% endfor %}
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="mt-5 h1 text-center">No software yet .
+            <a href="#">Be the first!</a>
+        </p>
+    {% endif %}
 
 {% endblock %}
