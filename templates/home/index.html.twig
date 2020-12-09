@@ -8,16 +8,16 @@
         {% for row in softwareList|batch(3) %}
             <div class="row mb-5">
                 {% for item in row %}
-                    <div class="col-md-3 mr-4">
+                    <div class="col-md-3 mr-4 mb-3">
                         <div class="card rounded-top overflow-hidden" style="width: 18rem;">
-                            <img class="card-img-top" src="https://place-hold.it/286x180" alt="Card image cap">
+                            <img class="card-img-top" src="{{ asset('img/286x180.gif') }}" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title text-left">
                                     {{ item.name }}
                                     <span class="badge badge-success" style="font-size: 12px;">
                                             {{ item.constructor }}
                                         </span>
-                                    
+
                                     <span class="badge badge-info" style="font-size: 12px;">
                                             {{ item.category }}
                                         </span>

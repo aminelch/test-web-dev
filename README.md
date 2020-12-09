@@ -7,7 +7,7 @@
     $- git clone https://github.com/aminelch/test-web-dev.git
     $- cd test-web-dev
     $- composer install #install dependencies
-    $- symfony console d:m:m  #aplly migrations
+    $- symfony console d:m:m  #apply migrations
     $- symfony console d:f:l --no-interaction # aplly fixtures
     $- symfony serve -d #launch dev server
 

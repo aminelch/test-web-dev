@@ -15,6 +15,7 @@ class SoftwareType extends AbstractType
             ->add('name')
             ->add('constructor')
             ->add('category')
+            ->add('description')
         ;
     }
 
