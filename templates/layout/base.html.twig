@@ -17,9 +17,12 @@
 </head>
 <body>
 {% set sitename = {'sitename': 'Demo'} %}
+
 {% include 'layout/partials/_navbar.html.twig' with  sitename %}
- {% include 'layout/partials/_flash.html.twig'  %}
 <div class="container" style="margin-top: 80px;">
+
+        {% include 'layout/partials/_flash.html.twig'  %}
+
 {% block body %}
 
 {% endblock %}

@@ -1,12 +1,14 @@
-<!DOCTYPE html>
+{% extends 'layout/base.html.twig' %}
 
-<title>Software index</title>
+{% block title 'Software index' %}
+
 
 {% block body %}
     <h1>Software index</h1>
-
-    <table class="table">
-        <thead>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table mb-3">
+            <thead>
             <tr>
                 <th>Id</th>
                 <th>Name</th>
@@ -14,26 +16,28 @@
                 <th>Category</th>
                 <th>actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for software in software %}
-            <tr>
-                <td>{{ software.id }}</td>
-                <td>{{ software.name }}</td>
-                <td>{{ software.constructor }}</td>
-                <td>{{ software.category }}</td>
-                <td>
-                    <a href="{{ path('software_show', {'id': software.id}) }}">show</a>
-                    <a href="{{ path('software_edit', {'id': software.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            {% for software in software %}
+                <tr>
+                    <td>{{ software.id }}</td>
+                    <td>{{ software.name }}</td>
+                    <td>{{ software.constructor }}</td>
+                    <td>{{ software.category }}</td>
+                    <td>
+                        <a href="{{ path('software_show', {'id': software.id}) }}">show</a>
+                        <a href="{{ path('software_edit', {'id': software.id}) }}">edit</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="5">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
-    <a href="{{ path('software_new') }}">Create new</a>
+        <a href="{{ path('software_new') }}" class="btn btn-success btn-block mt-3">Create new</a>
+    </div>
+</div>
 {% endblock %}
