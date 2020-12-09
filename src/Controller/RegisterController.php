@@ -34,7 +34,9 @@
                     $passwordEncoder->encodePassword(
                         $user,
                         $form['password']->getData()
-                    ));
+                    ))
+                     ->setRoles(['ROLE_USER'])
+                ;
 
 
                 $em->persist($user);
