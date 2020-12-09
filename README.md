@@ -1,18 +1,30 @@
 
-#Test Web dev
+# Test Web dev
 
   #### How it works
+
+ 1. List item
 
  ```bash
     $- git clone https://github.com/aminelch/test-web-dev.git
     $- cd test-web-dev
-    $- composer install #install dependencies
-    $- symfony console d:m:m  #apply migrations
-    $- symfony console d:f:l --no-interaction # aplly fixtures
-    $- symfony serve -d #launch dev server
+    $- composer install
+```
 
-#####environement
+ 2. you should look at **.env**
+
+ Change the **b_user** and  **db_password** as your config
+
+ 3.
+ ```bash
+    $- symfony console doctrine:database:create #create the database based on *.env* file
+    $- symfony console d:m:m  #apply migrations
+    $- symfony console d:f:l --no-interaction # apply fixtures
+    $- symfony serve -d #launch dev server
+```
+
+##### environment
 
 - PHPStorm
 - Firefox
-- Ubuntu 20.4
+- Ubuntu 20.4 
