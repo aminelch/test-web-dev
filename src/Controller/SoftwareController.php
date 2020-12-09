@@ -38,7 +38,7 @@ class SoftwareController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($software);
             $entityManager->flush();
-
+            $this->addFlash('success', 'Item added with success');
             return $this->redirectToRoute('software_index');
         }
 
@@ -68,7 +68,7 @@ class SoftwareController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
-
+            $this->addFlash('success', 'Item updated with success');
             return $this->redirectToRoute('software_index');
         }
 
@@ -88,7 +88,7 @@ class SoftwareController extends AbstractController
             $entityManager->remove($software);
             $entityManager->flush();
         }
-
+        $this->addFlash('success', 'Item deleted with success');
         return $this->redirectToRoute('software_index');
     }
 }

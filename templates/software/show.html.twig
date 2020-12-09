@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+{% extends 'layout/base.html.twig' %}
 
-<title>Software</title>
+{% block title %} 'Show ' {% endblock %}
 
 {% block body %}
-    <h1>Software</h1>
+    <h1>Software {{ software.name }}</h1>
 
     <table class="table">
         <tbody>
