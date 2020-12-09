@@ -25,8 +25,12 @@
                     <td>{{ software.constructor }}</td>
                     <td>{{ software.category }}</td>
                     <td>
-                        <a href="{{ path('software_show', {'id': software.id}) }}">show</a>
-                        <a href="{{ path('software_edit', {'id': software.id}) }}">edit</a>
+                        <a href="{{ path('software_show', {'id': software.id}) }}" class="btn btn-info">
+                            <i class="fa fa-eye"></i> show
+                        </a>
+                        <a href="{{ path('software_edit', {'id': software.id}) }}" class="btn btn-warning">
+                            <i class="fa fa-edit"></i> edit
+                        </a>
                     </td>
                 </tr>
             {% else %}
