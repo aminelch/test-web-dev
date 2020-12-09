@@ -1,11 +1,13 @@
-<!DOCTYPE html>
+{% extends 'layout/base.html.twig' %}
 
-<title>New Software</title>
+{% block title 'Create new software' %}
 
 {% block body %}
-    <h1>Create new Software</h1>
-
-    {{ include('software/_form.html.twig') }}
-
-    <a href="{{ path('software_index') }}">back to list</a>
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <h1>Create new Software</h1>
+        {{ include('software/_form.html.twig') }}
+        <a href="{{ path('software_index') }}">back to list</a>
+    </div>
+</div>
 {% endblock %}
