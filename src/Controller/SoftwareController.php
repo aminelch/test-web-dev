@@ -19,6 +19,8 @@ class SoftwareController extends AbstractController
 {
     /**
      * @Route("/", name="software_index", methods={"GET"})
+     * @param SoftwareRepository $softwareRepository
+     * @return Response
      */
     public function index(SoftwareRepository $softwareRepository): Response
     {
