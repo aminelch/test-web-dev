@@ -35,7 +35,24 @@ class AppFixtures extends Fixture
             ->setDescription("lorem ipsum")
             ->setConstructor("Intellij")
         ;
+
+        $software2 = new Software();
+        $software2->setCategory("IDE")
+            ->setConstructor("je suis une description")
+            ->setName("SublimeText")
+            ->setDescription("lorem ipsum")
+            ->setConstructor("Sublime HQ")
+        ;
+        $software3 = new Software();
+        $software3->setCategory("Browser")
+            ->setConstructor("je suis une description")
+            ->setName("Firefox")
+            ->setDescription("lorem ipsum")
+            ->setConstructor("Mozilla")
+        ;
         $manager->persist($software1);
+        $manager->persist($software2);
+        $manager->persist($software3);
         $manager->persist($user);
         $manager->flush();
     }

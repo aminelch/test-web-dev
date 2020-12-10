@@ -8,21 +8,23 @@
         {% for row in softwareList|batch(3) %}
             <div class="row mb-5">
                 {% for item in row %}
-                    <a href="{{ path('software_show', {id: item.id}) }}" style="text-decoration: none;">
+
                         <div class="col-md-3 mr-4 mb-3">
                             <div class="card rounded-top overflow-hidden" style="width: 18rem;">
                                 <img class="card-img-top" src="{{ asset('img/286x180.gif') }}" alt="Card image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title text-left">
-                                        {{ item.name }}
-                                        <span class="badge badge-success" style="font-size: 12px;">
-                                                {{ item.constructor }}
-                                            </span>
+                                    <a href="{{ path('software_show', {id: item.id}) }}" style="text-decoration: none;">
+                                        <h5 class="card-title text-left">
+                                            {{ item.name }}
+                                            <span class="badge badge-success" style="font-size: 12px;">
+                                                    {{ item.constructor }}
+                                                </span>
 
-                                        <span class="badge badge-info" style="font-size: 12px;">
-                                                {{ item.category }}
-                                            </span>
-                                    </h5>
+                                            <span class="badge badge-info" style="font-size: 12px;">
+                                                    {{ item.category }}
+                                                </span>
+                                        </h5>
+                                    </a>
                                     <p class="card-text">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis eligendi et modi necessitatibus? Ad cumque dolore
                                     </p>
@@ -30,7 +32,7 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
+
 
                 {% endfor %}
             </div>
