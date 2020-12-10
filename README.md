@@ -26,3 +26,17 @@
 - PHPStorm 
 - Firefox 
 - Ubuntu 20.4
+
+#### Screenshots
+
+![](https://github.com/aminelch/test-web-dev/blob/master/screenshots/1.png)
+
+![](https://github.com/aminelch/test-web-dev/blob/master/screenshots/2.png)
+
+![](https://github.com/aminelch/test-web-dev/blob/master/screenshots/3.png)
+
+![](https://github.com/aminelch/test-web-dev/blob/master/screenshots/4.png)
+
+![](https://github.com/aminelch/test-web-dev/blob/master/screenshots/5.png)
+
+![](https://github.com/aminelch/test-web-dev/blob/master/screenshots/6.png)
