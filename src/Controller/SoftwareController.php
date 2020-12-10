@@ -54,6 +54,8 @@ class SoftwareController extends AbstractController
 
     /**
      * @Route("/{id}", name="software_show", methods={"GET"})
+     * @param Software $software
+     * @return Response
      */
     public function show(Software $software): Response
     {
